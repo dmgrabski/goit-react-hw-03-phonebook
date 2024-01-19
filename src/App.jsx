@@ -30,7 +30,7 @@ class App extends React.Component {
   
 
   componentDidUpdate(prevProps, prevState) {
-    // Zapisywanie kontaktów do localStorage przy każdej zmianie..
+    // Zapisywanie kontaktów do localStorage przy każdej zmianie...
     if (prevState.contacts !== this.state.contacts) {
       localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
     }
