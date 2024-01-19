@@ -50,9 +50,10 @@ class App extends React.Component {
     }
   };
 
-  handleFilter = (e) => {
+  handleFilterChange = (e) => {
     this.setState({ filter: e.target.value });
   };
+  
 
   handleDelete = (id) => {
     this.setState((prevState) => ({
