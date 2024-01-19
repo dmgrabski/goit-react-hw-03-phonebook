@@ -16,7 +16,7 @@ class App extends React.Component {
     if (localContacts) {
       this.setState({ contacts: JSON.parse(localContacts) });
     } else {
-      // Ustawienie domyślnych kontaktów, jeśli localStorage jest pusty
+      // Ustawienie domyślnych kontaktów, jeśli localStorage jest pusty.
       this.setState({
         contacts: [
           { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
