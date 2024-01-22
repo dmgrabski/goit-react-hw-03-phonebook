@@ -29,12 +29,12 @@ class App extends React.Component {
   }
   
 
-  componentDidUpdate(prevProps, prevState) {
-    // Zapisywanie kontaktów do localStorage przy każdej zmianie....
-    if (prevState.contacts !== this.state.contacts) {
-      localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
-    }
+ componentDidUpdate(prevProps, prevState) {
+  if (JSON.stringify(prevState.contacts) !== JSON.stringify(this.state.contacts)) {
+    localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
   }
+}
+
 
   handleSubmit = (newContact) => {
     const isContactInTheList = this.state.contacts.some(
